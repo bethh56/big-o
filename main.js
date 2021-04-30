@@ -13,6 +13,22 @@
 
 // findNemo(large);
 
+// const findNemo2 = array => {
+//   array.forEach((fish) => {
+//     if(fish === 'nemo') {
+//       console.log('Found Nemo!')
+//     }
+//   });
+// }
+
+// const findNemo3 = array => {
+//   for(let fish of array) {
+//     if(fish === 'nemo') {
+//       console.log('Found Nemo!')
+//     }
+//   }
+// }
+
 
 // O(1) - constant time
 // no matter the size of the array and if it increases, it will always run the same
@@ -143,6 +159,18 @@
 
 //Twitter example
 // Find 1st, Find Nth
-const array = ['hi', 'my', 'teddy'];
-array[0]; //O(1)
-array[array.length-1] //O(1)
+// const array = [{
+//   tweet: 'hi',
+//   date: 2012
+//   }, {
+//   tweet: 'my',
+//   date: 2014
+//   }, {
+//   tweet: 'teddy',
+//   date: 2018
+//   }];
+// comparing tweets and dates, would need to nest loops so O(n^2)
+
+
+// 'jiasjflsjaljlll'.length // O notation would be different for different languages -- O(1) in js
+
