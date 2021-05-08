@@ -28,8 +28,8 @@
 
 // containsCommonItem(array, array2);
 
-const array = ['a', 'b', 'c', 'x'];
-const array2 = ['z', 'y', 'a'];
+const array = ['a', 1, 'c', 'x'];
+const array2 = ['c', 1, 'a'];
 
 // array ==> obj {
 //   a: true,
@@ -42,8 +42,29 @@ const array2 = ['z', 'y', 'a'];
 const containsCommonItem = (arr1, arr2) => {
   // loop through first array and create object 
   // where properties === items in the array
-  // loop through second array and check if item in
-  // second array exists on created object
+  let map = {};
+  for (let i = 0; i < arr1.length; i++) {
+    if(!map[arr1[i]]) {
+      const item = arr1[i]
+      map[item] = true;
+    }
+  }
+  // console.log(map);
+  //  loop through second array and check if item in
+  //  second array exists on created object
+  for (let j = 0; j < arr2.length; j++) {
+    if(map[arr2[j]]) {
+      return console.log('true');
+    }
+  }
+  return console.log('false');
 }
 
+
 //O(a+b)
+
+const containsCommonItem3 = (arr1, arr2) => {
+  return arr1.some(item => arr2.includes(item))
+}
+
+containsCommonItem3(array, array2)
